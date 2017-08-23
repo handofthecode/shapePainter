@@ -14,7 +14,7 @@ $(function() {
       return this.ctx.getImageData(0, 0, this.canvas.width, this.canvas.height);
     },
     eraseOrColor: function() {
-      return this.$eraser.hasClass('erase') ? 'white' : this.fillColor;
+      return this.$eraser.hasClass('eraseActive') ? 'white' : this.fillColor;
     },
     saveToUndo: function() {
       this.undos.push(this.getCanvas());
@@ -86,7 +86,7 @@ $(function() {
     },
     handleSelectShape: function(e) { 
       this.shape = e.target.getAttribute('id');
-      $('.active').toggleClass('active');
+      $('.active').removeClass('active');
       e.target.classList += 'active';
     },
     handleColorInput: function(e) { 
@@ -108,7 +108,7 @@ $(function() {
       this.holdClick = false;
     },
     handleEraser: function(e) {
-      $(e.target).toggleClass('erase');
+      $(e.target).toggleClass('eraseActive');
     },
     handleUndoRedo: function(e) {
       if (e.key === 'y') this.redo();
@@ -123,12 +123,8 @@ $(function() {
       this.ctx = this.canvas.getContext('2d');
       this.$colorInput = $('#color');
       this.$eraser = $('#eraser');
-
-      this.shape = 'square';
       this.fillColor = 'black';
-      this.x;
-      this.y;
-      this.holdClick;
+      this.shape = 'square';
       this.shapeSize = 25;
       this.undos = [];
       this.redos = [];
