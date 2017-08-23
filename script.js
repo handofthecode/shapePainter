@@ -8,6 +8,7 @@ var painter;
 
 $(function() {
   $('#name').val(name);
+  $('#title').val(name);
 
   painter = {
     getCanvas: function() {
@@ -76,6 +77,10 @@ $(function() {
       $(document).on('keydown', this.handleUndoRedo.bind(this));
       $('#download').on('click', this.handleDownload.bind(this));
       $('#set_canvas').on('submit', this.handleSetup.bind(this));
+      $('#name').on('change keyup', this.handleNameChange.bind(this));
+    },
+    handleNameChange: function(e) {
+      $('#title').val(e.target.value);
     },
     handleSetup: function(e) {
       $('#tint').fadeOut();
