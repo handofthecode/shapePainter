@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+	<title>Shape Painter</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"
+	  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+	  crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</head>
+	<body>
+		<div id="tint">
+			<div id="setup">
+				<h2> Welcome to shape painter! </h2>
+				<p> To paint just click and drag! </p>
+				<p> To fix a mistake, type 'z' to undo, or 'y' to redo. </p>
+				<p> When finished, click below to download your artwork!</p>
+				<form id="set_canvas">
+					<label class="form_heading">Canvas size in pixels:</label>
+					<fieldset>
+						<label>width:
+							<input type="number" id="width" value="800" step="10" />
+						</label>
+					</fieldset>
+					<fieldset>
+						<label>height:
+							<input type="number" id="height" value="600" step="10" />
+						</label>
+					</fieldset>
+						<label class="form_heading">Project Name: </label>
+					<fieldset>
+						<input type="text" id="name" value="My Art" />
+					</fieldset>
+						<input type="submit" value="let's paint!">
+				</form>
+				
+			</div>
+		</div>
+		<main>
+			<fieldset>
+				<input type='text' id="title" value="My Art"></fieldset>
+			</fieldset>
+			<form action="" method="GET">
+				<fieldset id="shapes">
+					Pick a shape:
+					<input type="button" value="square" id="square" class="active"/>
+					<input type="button" value="circle" id="circle" />
+					<input type="button" value="triangle" id="triangle" />
+				</fieldset>
+				<input type="button" id="eraser" value="eraser"/>
+				<fieldset>
+					<label for="color">Color:</label>
+					<input type="text" id="color" value="black"/>
+					<label for="size">Shape size:</label>
+					<input type="number" id="shape_size" value="25" step="5"/>
+					<input type="button" value="clear canvas" id="clear" />
+				</fieldset>
+			</form>
+			<canvas width="800" height="600"></canvas>
+			<div class="wrapper">
+				<a href="#"" id="download" >It's a masterpiece! Download it now!</a>
+			</div>
+		</main>
+	</body>
+</html>

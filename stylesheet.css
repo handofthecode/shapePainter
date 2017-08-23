@@ -1,0 +1,97 @@
+body {
+	background: pink;
+	font: normal 16px Helvetica, Arial, sans-serif;
+}
+canvas {
+	display: block;
+	background-color: white;
+	border: 1px solid black;
+	margin: auto;
+}
+div.wrapper {
+	text-align: center;
+	margin: 20px;
+}
+a {
+	font-size: 25px;
+}
+/*FORMS*/
+.form_heading {
+	font-size: 22px;
+	display: block;
+	margin: 20px 0 5px 0; 
+}
+fieldset {
+	border: none;
+}
+main label {
+	display: inline-block;
+	margin: 15px 7px;
+}
+/*INPUTS*/
+input[type=text],
+input[type=number] {
+	padding: 5px;
+}
+#name {
+	width: 100%;
+	text-align: center;
+}
+input#clear {
+	float: right;
+}
+input#title {
+	display: block;
+	font-size: 40px;
+	text-align: center;
+	width: 100%;
+}
+/*BUTTONS*/
+input[type=submit] {
+	background: magenta;
+	padding: 25px;
+	margin-top: 10px;
+}
+input.active,
+input.erase {
+	background-color: grey;
+}
+#eraser {
+	margin-left: 20px;
+}
+input {
+	vertical-align: middle;
+	font-size: 20px;
+	border: none;
+	border-radius: 3px;
+}
+
+#shapes {
+	display: inline-block;
+}
+/*OVERLAY*/
+#set_canvas {
+	margin-top: 25px;
+}
+#setup {
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 500px;
+	height: 500px;
+	background: lightblue;
+	text-align: center;
+	margin: auto;
+}
+#tint {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, .2);
+	z-index: 2;
+}
