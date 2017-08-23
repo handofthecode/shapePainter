@@ -34,14 +34,13 @@
 					</fieldset>
 						<input type="submit" value="let's paint!">
 				</form>
-				
 			</div>
 		</div>
 		<main>
 			<fieldset>
-				<input type='text' id="title" value="My Art"></fieldset>
+				<input type='text' id="title" value="My Art">
 			</fieldset>
-			<form action="" method="GET">
+			<form method="GET">
 				<fieldset id="shapes">
 					Pick a shape:
 					<input type="button" value="square" id="square" class="active"/>
@@ -52,14 +51,14 @@
 				<fieldset>
 					<label for="color">Color:</label>
 					<input type="text" id="color" value="black"/>
-					<label for="size">Shape size:</label>
+					<label for="shape_size">Shape size:</label>
 					<input type="number" id="shape_size" value="25" step="5"/>
 					<input type="button" value="clear canvas" id="clear" />
 				</fieldset>
 			</form>
 			<canvas width="800" height="600"></canvas>
 			<div class="wrapper">
-				<a href="#"" id="download" >It's a masterpiece! Download it now!</a>
+				<a href="#" id="download" >It's a masterpiece! Download it now!</a>
 			</div>
 		</main>
 	</body>
