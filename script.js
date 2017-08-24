@@ -83,6 +83,7 @@ $(function() {
       $('#title').val(e.target.value);
     },
     handleSetup: function(e) {
+      e.preventDefault();
       $('#tint').fadeOut();
       this.canvas.width = $('#width').val();
       this.canvas.height = $('#height').val();
